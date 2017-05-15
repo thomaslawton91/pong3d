@@ -109,17 +109,17 @@ function createBall(){
     scene.add(ball.mesh);
 }
 
-var speeds = [-1, 0, 1];
+var speeds = [-3, 0, 3];
 var xSpeed = speeds[Math.floor(Math.random() * speeds.length)];
 var ySpeed = speeds[Math.floor(Math.random() * speeds.length)];
 
 function bounce(){
-    if (ball.mesh.position.x >= window.innerWidth/2 || ball.mesh.position.x <= -window.innerWidth/2){
+    if (ball.mesh.position.x >= WIDTH/2 || ball.mesh.position.x <= WIDTH/2){
         ball.mesh.position.x += -xSpeed;
         ball.mesh.position.y += -ySpeed;
     }
 
-    if (ball.mesh.position.y >= window.innerHeight/2 || ball.mesh.position.y <= -window.innerHeight/2){
+    if (ball.mesh.position.y >= window.innerHeight/2 || ball.mesh.position.y <= -HEIGHT/2){
         ball.mesh.position.x += -xSpeed;
         ball.mesh.position.y += -ySpeed;
     }
